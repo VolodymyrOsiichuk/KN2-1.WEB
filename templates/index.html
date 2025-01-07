@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Печі та Камiни</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <!-- Навігаційна панель -->
+    <header class="navbar">
+        <div class="logo"><a href="/">ПечіКаміни</a></div>
+        <ul>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#catalog">Печі-Каміни</a></li>
+            <li><a href="#cart">Кошик</a></li>
+            <li><a href="/signup">Зареєструватися</a></li>
+            <li><a href="/signin">Увійти</a></li>
+        </ul>
+    </header>
+
+    <!-- Головний контент -->
+    <section class="hero">
+        <h1>Ласкаво просимо до "Печі та Каміни"</h1>
+        <p>Місце, де тепло та затишок зустрічаються з якістю та стилем.</p>
+    </section>
+
+    <!-- Секція товарів -->
+    <section class="products">
+        <a href="#">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='product_img/1111.png') }}" alt="Камін 1">
+                <h4>Камінна топка Austroflamm 97 S</h4>
+                <p>29 159 грн</p>
+                <button>Детальніше</button>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='product_img/22222.jpg') }}" alt="Камін 2">
+                <h4>Камінна топка Kobok Chopok L 67</h4>
+                <p>19 239 грн</p>
+                <button>Детальніше</button>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='product_img/3333.jpg') }}" alt="Камін 3">
+                <h4>Піч чавунна Plamen Tara</h4>
+                <p>22 956 грн</p>
+                <button>Детальніше</button>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='product_img/44444.jpg') }}" alt="Камін 3">
+                <h4>Чавуна піч Dovre Saga 107</h4>
+                <p>45 034 грн</p>
+                <button>Детальніше</button>
+            </div>
+        </a>
+    </section>
+
+    <section class="content">
+        <h2>Чому варто обрати нас?</h2>
+        <p>
+            Ми спеціалізуємося на будівництві та встановленні печей і камінів будь-якої складності.
+            Висока якість, надійність та унікальний дизайн – це наші головні переваги.
+        </p>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>&copy; 2025 ПечіКаміни. Всі права захищено.</p>
+    </footer>
+</body>
+
+</html>

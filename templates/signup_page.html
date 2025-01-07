@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    {% block content %}
+    <!-- Навігаційна панель -->
+    <header class="navbar">
+        <div class="logo"><a href="/">ПечіКаміни</a></div>
+        <ul>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#catalog">Печі-Каміни</a></li>
+            <li><a href="#cart">Кошик</a></li>
+            <li><a href="/signup">Зареєструватися</a></li>
+            <li><a href="/signin">Увійти</a></li>
+        </ul>
+    </header>
+    <section class="singup_page">
+        <form class="registration-form" method="POST"action="/signup" id="sign-up-form">
+            <h2>Реєстрація</h2>
+            <label for="username">Ім'я користувача</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Електронна пошта</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Зареєструватися</button>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="msg">
+                {% for message in messages %}
+                <li style="color:green">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            {% endblock %}
+        </form>
+    </section>
+    <!-- Футер -->
+    <footer class="footer">
+        <p>&copy; 2025 ПечіКаміни. Всі права захищено.</p>
+    </footer>
+</body>
+
+</html>
